@@ -1,0 +1,12 @@
+/* ============================================================
+   FONTS — Design Company LP
+   Loaded from Google Fonts CDN. Consumers link styles.css which
+   reaches this file. To self-host, replace the @import with local
+   @font-face rules pointing at copied .woff2 binaries.
+   ------------------------------------------------------------
+   Newsreader     — editorial display serif (optical, has italics)
+   Hanken Grotesk — body + UI grotesque sans
+   Space Mono     — eyebrows, labels, metadata
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');

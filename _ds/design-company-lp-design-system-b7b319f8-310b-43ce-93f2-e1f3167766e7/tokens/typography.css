@@ -1,0 +1,79 @@
+/* ============================================================
+   TYPOGRAPHY — Design Company LP
+   Newsreader (display serif) / Hanken Grotesk (sans) / Space Mono.
+   ============================================================ */
+
+:root {
+  /* ---- Families ----------------------------------------- */
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* ---- Weights ------------------------------------------ */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    800;
+
+  /* ---- Type scale (px) ---------------------------------- */
+  --text-2xs:  11px;
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  38px;
+  --text-4xl:  48px;
+  --text-5xl:  64px;
+  --text-6xl:  84px;
+  --text-7xl:  108px;
+
+  /* ---- Line heights ------------------------------------- */
+  --leading-none:    1;
+  --leading-tight:   1.08;
+  --leading-snug:    1.22;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* ---- Letter spacing ----------------------------------- */
+  --tracking-tighter: -0.03em;
+  --tracking-tight:   -0.015em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.12em;   /* mono eyebrows */
+  --tracking-widest:  0.22em;
+
+  /* ---- Semantic roles ----------------------------------- */
+  --eyebrow-font:    var(--font-mono);
+  --eyebrow-size:    var(--text-xs);
+  --eyebrow-track:   var(--tracking-wider);
+  --eyebrow-weight:  var(--weight-regular);
+}
+
+/* ---- Optional role classes (handy in cards / kits) ------ */
+.t-display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.t-display-italic { font-family: var(--font-display); font-style: italic; font-weight: var(--weight-light); }
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: var(--weight-regular);
+}
+.t-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+}
+.t-mono { font-family: var(--font-mono); }

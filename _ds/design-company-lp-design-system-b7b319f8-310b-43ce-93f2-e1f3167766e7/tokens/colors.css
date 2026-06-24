@@ -1,0 +1,110 @@
+/* ============================================================
+   COLORS — Design Company LP
+   Warm paper neutrals + warm near-black ink + a single persimmon
+   accent. Flat fills only — no gradients. Base values first, then
+   semantic aliases. Reach for the semantic aliases in product work.
+   ============================================================ */
+
+:root {
+  /* ---- Neutrals: warm paper -> warm ink ------------------ */
+  --paper-0: #FBF9F5;   /* page, lightest */
+  --paper-1: #F5F1E9;   /* default surface / cards */
+  --paper-2: #ECE6DA;   /* sunk / muted surface */
+  --paper-3: #E2DACB;   /* hover on muted */
+
+  --line-0: #E4DCCD;    /* hairline divider */
+  --line-1: #D7CDBA;    /* default border */
+  --line-2: #C4B8A1;    /* strong border / focus ring base */
+
+  --ink-0:  #1B1915;    /* near-black, warm — primary text & dark surfaces */
+  --ink-1:  #2C2820;    /* raised dark surface */
+  --ink-2:  #3D372D;    /* dark hover */
+
+  --stone-1: #6C6557;   /* muted text */
+  --stone-2: #8C8474;   /* faint text / placeholder */
+  --stone-3: #ABA28F;   /* disabled text */
+
+  /* ---- Accent: persimmon -------------------------------- */
+  --persimmon-50:  #FBEDE6;
+  --persimmon-100: #F6D8C9;
+  --persimmon-300: #ECA98E;
+  --persimmon-500: #D85230;   /* DEFAULT accent */
+  --persimmon-600: #C0431F;   /* hover */
+  --persimmon-700: #9E3417;   /* press / on-light text */
+
+  /* ---- Semantic signal colors (UI states) --------------- */
+  --green-500:  #3F7D58;
+  --green-50:   #E7F0E9;
+  --amber-500:  #C0871C;
+  --amber-50:   #F7EDD6;
+  --red-500:    #C0331F;
+  --red-50:     #F8E2DC;
+  --blue-500:   #2F5FB0;
+  --blue-50:    #E1E9F5;
+
+  /* ========================================================
+     SEMANTIC ALIASES — prefer these in product work
+     ======================================================== */
+
+  /* Surfaces */
+  --surface-page:    var(--paper-0);
+  --surface-card:    var(--paper-1);
+  --surface-sunk:    var(--paper-2);
+  --surface-raised:  #FFFFFF;
+  --surface-inverse: var(--ink-0);
+
+  /* Text */
+  --text-strong:   var(--ink-0);
+  --text-body:     #2C2820;
+  --text-muted:    var(--stone-1);
+  --text-faint:    var(--stone-2);
+  --text-disabled: var(--stone-3);
+  --text-on-ink:   var(--paper-0);
+  --text-on-accent:#FBF9F5;
+  --text-accent:   var(--persimmon-700);
+  --text-link:     var(--persimmon-700);
+
+  /* Borders */
+  --border-hair:   var(--line-0);
+  --border-default:var(--line-1);
+  --border-strong: var(--line-2);
+  --border-ink:    var(--ink-0);
+
+  /* Accent / interactive */
+  --accent:        var(--persimmon-500);
+  --accent-hover:  var(--persimmon-600);
+  --accent-press:  var(--persimmon-700);
+  --accent-wash:   var(--persimmon-50);
+
+  /* Focus */
+  --focus-ring:    var(--persimmon-500);
+
+  /* Status */
+  --status-success: var(--green-500);
+  --status-warning: var(--amber-500);
+  --status-danger:  var(--red-500);
+  --status-info:    var(--blue-500);
+  --status-success-wash: var(--green-50);
+  --status-warning-wash: var(--amber-50);
+  --status-danger-wash:  var(--red-50);
+  --status-info-wash:    var(--blue-50);
+}
+
+/* Dark / ink section scope — opt in with class="on-ink" */
+.on-ink {
+  --surface-page:   var(--ink-0);
+  --surface-card:   var(--ink-1);
+  --surface-sunk:   #16140F;
+  --surface-raised: var(--ink-2);
+  --text-strong:    var(--paper-0);
+  --text-body:      #E9E3D7;
+  --text-muted:     #B3AB9A;
+  --text-faint:     #8C8474;
+  --border-hair:    rgba(255,255,255,0.08);
+  --border-default: rgba(255,255,255,0.14);
+  --border-strong:  rgba(255,255,255,0.24);
+  --text-link:      var(--persimmon-300);
+  --text-accent:    var(--persimmon-300);
+  color: var(--text-body);
+  background: var(--surface-page);
+}
