@@ -16,6 +16,16 @@
   body{font-family:'Noto Sans JP',sans-serif;color:#4a4a47;background:#f1f0ea;line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
   a{text-decoration:none;color:inherit}
   input{font-family:'Noto Sans JP',sans-serif}
+
+  @media(max-width:768px){
+    .nav-desktop{display:none!important}
+    .page-header{padding:36px 20px 32px!important}
+    .page-header h1{font-size:24px!important}
+    .main-wrap{padding:0 16px!important;margin:30px auto 40px!important}
+    .form-wrap{padding:26px 18px!important}
+    .demo-grid{grid-template-columns:1fr!important}
+    .demo-card{padding:22px 18px!important}
+  }
 </style>
 </helmet>
 
@@ -32,16 +42,14 @@
         <span style="font-size:10.5px;letter-spacing:.16em;color:#8a8a84">医療の出会いに、安心を。</span>
       </span>
     </a>
-    <nav style="display:flex;align-items:center;gap:26px">
-      <a href="index.html" style="font-size:13.5px;font-weight:500;color:#5a5a54;letter-spacing:.04em" style-hover="color:#4a8a2c">サービス紹介</a>
-      <a href="register.html" style="font-size:13.5px;font-weight:500;color:#5a5a54;letter-spacing:.04em" style-hover="color:#4a8a2c">新規会員登録</a>
+    <nav class="nav-desktop" style="display:flex;align-items:center;gap:26px"> style="font-size:13.5px;font-weight:500;color:#5a5a54;letter-spacing:.04em" style-hover="color:#4a8a2c">新規会員登録</a>
       <a href="login.html" style="font-size:13px;font-weight:600;color:#fff;background:#e0796b;border-radius:4px;padding:9px 17px;letter-spacing:.04em;box-shadow:0 4px 12px rgba(224,121,107,.28)" style-hover="background:#d06a5a">ログイン</a>
     </nav>
   </div>
 </header>
 
 <!-- PAGE HEADER -->
-<section style="position:relative;background:linear-gradient(105deg,#6aa830 0%,#86bb44 55%,#aacd5e 100%);overflow:hidden;text-align:center;padding:54px 32px 50px">
+<section class="page-header" style="position:relative;background:linear-gradient(105deg,#6aa830 0%,#86bb44 55%,#aacd5e 100%);overflow:hidden;text-align:center;padding:54px 32px 50px">
   <div style="position:absolute;right:8%;top:50%;transform:translateY(-50%);width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 38% 35%,rgba(255,255,255,.3),rgba(255,255,255,0) 62%)"></div>
   <div style="position:relative">
     <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:rgba(255,255,255,.92)">Welcome back</p>
@@ -51,9 +59,9 @@
 </section>
 
 <!-- MAIN -->
-<main style="flex:1;max-width:460px;width:100%;margin:48px auto 56px;padding:0 24px">
+<main class="main-wrap" style="flex:1;max-width:460px;width:100%;margin:48px auto 56px;padding:0 24px">
 
-  <form style="background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:36px 32px;box-shadow:0 6px 26px rgba(0,0,0,.05)" onsubmit="return false">
+  <form class="form-wrap" style="background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:36px 32px;box-shadow:0 6px 26px rgba(0,0,0,.05)" onsubmit="return false">
     <div style="margin-bottom:22px">
       <label style="display:block;font-size:13px;font-weight:600;color:#4a4a45;margin-bottom:8px">メールアドレス</label>
       <input type="email" placeholder="example@example.com" style="width:100%;padding:12px 14px;border:1.5px solid #dcdbd2;border-radius:8px;font-size:14px;color:#4a4a47;background:#fbfbf8" style-focus="outline:none;border-color:#7cb342;box-shadow:0 0 0 3px rgba(124,179,66,.14)">
@@ -67,13 +75,13 @@
   </form>
 
   <!-- DEMO CARD -->
-  <div style="background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:26px 28px;box-shadow:0 6px 26px rgba(0,0,0,.04);margin-top:20px">
+  <div class="demo-card" style="background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:26px 28px;box-shadow:0 6px 26px rgba(0,0,0,.04);margin-top:20px">
     <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:#4a4a45;margin-bottom:6px">
       <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#7cb342" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"></circle><path d="m21 2-9.6 9.6"></path><path d="m15.5 7.5 3 3L22 7l-3-3"></path></svg>
       デモアカウントでログイン
     </div>
     <p style="font-size:12px;color:#8a8a82;margin-bottom:16px;line-height:1.7">プロトタイプ確認用のアカウントです。ワンクリックでログインできます。</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="demo-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <button style="background:#f6fbfb;border:1.5px solid #d4e7e7;border-radius:9px;padding:14px 10px;text-align:center;cursor:pointer;font-family:'Noto Sans JP',sans-serif" style-hover="border-color:#36a3a8;background:#eef8f8">
         <span style="display:block;font-size:13px;font-weight:700;color:#2c8589">求職者</span>
         <span style="display:block;font-size:11px;color:#8a8a82;margin-top:2px">佐藤 花子／看護師</span>
