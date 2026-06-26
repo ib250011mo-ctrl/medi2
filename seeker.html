@@ -85,8 +85,10 @@
 </header>
 
 <!-- HERO -->
-<section style="background:linear-gradient(135deg,#e8f5f6 0%,#d4eced 40%,#eaf4e4 100%);overflow:hidden">
-  <div class="hero-inner" style="max-width:1240px;margin:0 auto;padding:72px 32px 60px;display:flex;align-items:center;gap:48px">
+<section style="position:relative;overflow:hidden;background:url('img/seeker-hero.png') center/cover no-repeat;">
+  <!-- overlay để chữ đọc rõ -->
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(232,245,246,0.92) 0%,rgba(212,236,237,0.88) 40%,rgba(234,244,228,0.85) 100%);z-index:0"></div>
+  <div class="hero-inner" style="position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:72px 32px 60px;display:flex;align-items:center;gap:48px">
     <div class="hero-text" style="flex:1;max-width:580px">
       <span class="hero-badge" style="display:inline-block;background:#36a3a8;color:#fff;font-size:12px;font-weight:700;letter-spacing:.12em;padding:7px 16px;border-radius:30px;margin-bottom:20px">求職者（医療資格者）専用ページ</span>
       <h1 class="hero-title" style="font-family:'Noto Serif JP',serif;font-weight:700;font-size:28px;line-height:1.75;color:#2c4a4c;letter-spacing:.04em">あなたの資格と想いを、<br>ぴったりの職場へ。<br><span style="color:#36a3a8">登録・転職支援は完全無料。</span></h1>
